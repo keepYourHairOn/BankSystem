@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c93ece13-a74b-417e-bc9c-e4be579b5a05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Branch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Transaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Account.java" afterPath="$PROJECT_DIR$/src/com/company/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Bank.java" afterPath="$PROJECT_DIR$/src/com/company/Bank.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Branch.java" afterPath="$PROJECT_DIR$/src/com/company/Branch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BankSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,9 +31,78 @@
       <file leaf-file-name="Account.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Account.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4151436">
+              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+              <folding>
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#750#751#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#976#977#0" expanded="true" />
+                <element signature="e#1030#1031#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1200#1201#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1366#1367#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bank.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Bank.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Branch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Branch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#809#810#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#965#966#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+                <element signature="e#1155#1156#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,7 +110,21 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="keepYourHairOn" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/company/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Bank.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Branch.java" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
@@ -293,24 +374,26 @@
       <created>1437852188116</created>
       <option name="number" value="Default" />
       <updated>1437852188116</updated>
-      <workItem from="1437852194220" duration="654000" />
+      <workItem from="1437852194220" duration="2819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="654000" />
+    <option name="totallyTimeSpent" value="2819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -320,28 +403,96 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic methods were specified." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic methods were specified." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Branch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4151436">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding>
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
