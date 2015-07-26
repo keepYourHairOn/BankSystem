@@ -15,11 +15,11 @@ public class Withdrawal extends Transaction {
      * constructor with parameters
      *
      * @param withdraw is money to withdraw from the balance
-     * @param balance  is current balance of the account
      */
-    public Withdrawal(double withdraw, double balance) {
+    public Withdrawal(double withdraw) {
         this.withdraw = withdraw;
-        this.balance = balance;
+        this.balance = firstAccount.getBalance();
+        this.secondAccount = null;
         this.date = new Date();
         this.name = "Withdrawal";
 
@@ -36,6 +36,7 @@ public class Withdrawal extends Transaction {
             balance -= withdraw;
             this.isValid = true;
             transaction = "Withdraw of: " + withdraw + " rubles.";
+            this.firstAccount.addTransaction(this);
             System.out.println("Withdrawal operation complete successfully!");
         } else {
             this.isValid = false;

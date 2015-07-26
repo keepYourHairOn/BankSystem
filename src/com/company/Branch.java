@@ -45,6 +45,7 @@ public class Branch {
     public void addAccount(Account account){
         if (accountsCount < 100) {
             accounts[accountsCount] = account;
+            account.setBranch(this);
             accountsCount++;
         } else {
             System.out.println("This branch already has 100 accounts!");

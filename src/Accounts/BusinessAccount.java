@@ -4,7 +4,6 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class BusinessAccount extends Account {
-    private Double interest = 0.01 / 30;
 
     /**
      * constructor with parameters
@@ -21,6 +20,7 @@ public class BusinessAccount extends Account {
         this.id = account.getId();
         this.balance = account.getBalance();
         this.type = Accounts_type.Business;
+        this.interest = 0.01 / 30;
     }
 
     /**
@@ -41,5 +41,9 @@ public class BusinessAccount extends Account {
         System.out.println("Initial deposit: 5000000 rubles");
         System.out.println("Interest per month: 1%");
         System.out.println("+-----------------------------------------------------+");
+    }
+
+    public Double getInterest() {
+        return interest;
     }
 }

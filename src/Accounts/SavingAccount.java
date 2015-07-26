@@ -4,7 +4,6 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class SavingAccount extends Account {
-    private Double interest = 0.05 / 30;
 
     /**
      * constructor with parameters
@@ -21,6 +20,7 @@ public class SavingAccount extends Account {
         this.id = account.getId();
         this.balance = account.getBalance();
         this.type = Accounts_type.Saving;
+        this.interest = interest = 0.05 / 30;
     }
 
     /**
@@ -42,5 +42,9 @@ public class SavingAccount extends Account {
         System.out.println("Interest per month: 5%");
         System.out.println("+-----------------------------------------------------+");
 
+    }
+
+    public Double getInterest() {
+        return interest;
     }
 }

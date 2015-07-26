@@ -1,6 +1,7 @@
 package Accounts;
 
 import Transaction.Transaction;
+import com.company.Branch;
 
 import java.util.Random;
 
@@ -22,6 +23,8 @@ public abstract class Account {
     protected Transaction[] transactions = new Transaction[100];
     protected Accounts_type type;
     protected Double balance;
+    protected Branch branch;
+    protected Double interest;
 
     /**
      * constructor with parameters
@@ -145,5 +148,17 @@ public abstract class Account {
 
     public Double getBalance() {
         return balance;
+    }
+
+    public Branch getBranch() {
+        return branch;
+    }
+
+    public void setBranch(Branch branch) {
+        this.branch = branch;
+    }
+
+    public Double getInterest() {
+        return interest;
     }
 }

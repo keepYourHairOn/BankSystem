@@ -4,8 +4,6 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class ChequingAccount extends Account {
-    private Double interest = 1000d / 30;
-
     /**
      * constructor with parameters
      *
@@ -21,6 +19,7 @@ public class ChequingAccount extends Account {
         this.id = account.getId();
         this.balance = account.getBalance();
         this.type = Accounts_type.Chequing;
+        this.interest = 1000d / 30;
     }
 
     /**
@@ -41,5 +40,9 @@ public class ChequingAccount extends Account {
         System.out.println("Initial deposit: 1000 rubles");
         System.out.println("Amount of fee per month: 1000 rubles");
         System.out.println("+-----------------------------------------------------+");
+    }
+
+    public Double getInterest() {
+        return interest;
     }
 }

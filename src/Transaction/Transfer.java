@@ -16,13 +16,13 @@ public class Transfer extends Transaction {
      * constructor with parameters
      *
      * @param transfer is transfer to add to the balance2 from the balance1
-     * @param balance1 is current balance of the account from which we transfer money
-     * @param balance2 is current balance of the account to which we transfer money
      */
-    public Transfer(double transfer, double balance1, double balance2) {
+    public Transfer(double transfer) {
         this.transfer = transfer;
-        this.balance1 = balance1;
-        this.balance2 = balance2;
+        this.balance1 = firstAccount.getBalance();
+        this.balance2 = secondAccount.getBalance();
+        this.firstAccountBranch = firstAccount.getBranch();
+        this.secondAccountBranch = secondAccount.getBranch();
         this.date = new Date();
     }
 
@@ -33,6 +33,17 @@ public class Transfer extends Transaction {
 
     @Override
     public void makeTransaction() {
-
+        if (transfer <= balance1 && transfer > 0) {
+            balance1 -= transfer;
+            balance2 += transfer;
+            isValid = true;
+            transaction = "Transfer: " + transfer + " rubles. From: " + firstAccount.getId() + " To: " + secondAccount.getId();
+            this.firstAccount.addTransaction(this);
+            this.secondAccount.addTransaction(this);
+            System.out.println("Transfer operation inside one branch complete successfully!");
+        } else {
+            this.isValid = false;
+            System.out.println("Transferring operation failure!");
+        }
     }
 }

@@ -6,22 +6,9 @@ import java.util.Date;
  * Created by Admin on 26.07.2015.
  */
 public class Interest_payment extends Transaction {
-    private Double interest;
-    private Double balance;
     private String transaction;
     private Transaction_types type = Transaction_types.Transfer;
 
-    /**
-     * constructor with parameters
-     *
-     * @param interest is interest to add to the balance
-     * @param balance  is current balance of the account
-     */
-    public Interest_payment(double interest, double balance) {
-        this.interest = interest;
-        this.balance = balance;
-        this.date = new Date();
-    }
 
     @Override
     public void description() {
@@ -30,6 +17,15 @@ public class Interest_payment extends Transaction {
 
     @Override
     public void makeTransaction() {
-
+        if (firstAccount.getBalance() > 0) {
+            this.isValid = true;
+            firstAccount.calculate();
+            transaction = "Interest payment: " + firstAccount.getInterest() + " per day. Balance: " + firstAccount.getBalance();
+            this.firstAccount.addTransaction(this);
+            System.out.println("Interest payment operation success!");
+        } else {
+            this.isValid = false;
+            System.out.println("Interest payment operation success!");
+        }
     }
 }

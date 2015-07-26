@@ -1,6 +1,8 @@
 package Transaction;
 
 import Accounts.Account;
+import Accounts.Accounts_type;
+import com.company.Branch;
 
 import java.util.Date;
 
@@ -11,11 +13,21 @@ public abstract class Transaction {
     protected String name;
     protected Date date;
     protected boolean isValid;
-    protected Account account;
+    protected Account firstAccount;
+    protected Account secondAccount;
+    protected Branch firstAccountBranch;
+    protected Branch secondAccountBranch;
 
     /**
-     * default constructor
+     * constructor with parameters
      */
+    public Transaction(Account type1, Account type2) {
+        this.firstAccount = type1;
+        this.secondAccount = type2;
+        this.firstAccountBranch = firstAccount.getBranch();
+        this.secondAccountBranch = secondAccount.getBranch();
+    }
+
     public Transaction() {
     }
 
@@ -37,4 +49,5 @@ public abstract class Transaction {
     public boolean isValid() {
         return isValid;
     }
+
 }

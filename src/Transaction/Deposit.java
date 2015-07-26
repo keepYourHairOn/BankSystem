@@ -15,11 +15,11 @@ public class Deposit extends Transaction {
      * constructor with parameters
      *
      * @param deposit is deposit to add to the balance
-     * @param balance is current balance of the account
      */
-    public Deposit(double deposit, double balance) {
+    public Deposit(double deposit) {
         this.deposit = deposit;
-        this.balance = balance;
+        this.balance = firstAccount.getBalance();
+        this.secondAccount = null;
         this.date = new Date();
     }
 
@@ -34,6 +34,7 @@ public class Deposit extends Transaction {
             balance += deposit;
             this.isValid = true;
             transaction = "Deposit of: " + deposit + " rubles.";
+            this.firstAccount.addTransaction(this);
             System.out.println("Deposit operation complete successfully!");
         } else {
             this.isValid = false;
