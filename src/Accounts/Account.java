@@ -2,6 +2,7 @@ package Accounts;
 
 import Transaction.Transaction;
 import com.company.Branch;
+import com.company.Customer;
 
 import java.util.Random;
 
@@ -12,14 +13,9 @@ public abstract class Account {
     /**
      * variables for storing account's data
      */
+    protected Customer customer;
     protected static Integer transactionsCount = 0;
     protected Integer id;
-    protected String firstName;
-    protected String lastName;
-    protected String patronym;
-    protected String dateOfBirth;
-    protected String sex;
-    protected String passportId;
     protected Transaction[] transactions = new Transaction[100];
     protected Accounts_type type;
     protected Double balance;
@@ -27,30 +23,11 @@ public abstract class Account {
     protected Double interest;
 
     /**
-     * constructor with parameters
-     *
-     * @param firstName   is name of the user
-     * @param lastName    is surname of the user
-     * @param patronym    is patronym of the user
-     * @param dateOfBirth is day month and year of birth
-     * @param sex         is sex of user
-     * @param passportId  is passport number
-     */
-    public Account(String firstName, String lastName, String patronym, String dateOfBirth, String sex, String passportId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.patronym = patronym;
-        this.dateOfBirth = dateOfBirth;
-        this.sex = sex;
-        this.passportId = passportId;
-        Random random = new Random();
-        this.id = random.nextInt(1000);
-    }
-
-    /**
-     * default constructor
+     * constructor
      */
     public Account() {
+        Random random = new Random();
+        this.id = random.nextInt(1000);
     }
 
     /**
@@ -90,52 +67,13 @@ public abstract class Account {
     /*
      * getters and setters for private variables
      */
-    public String getFirstName() {
-        return firstName;
+
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPatronym() {
-        return patronym;
-    }
-
-    public void setPatronym(String patronym) {
-        this.patronym = patronym;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getPassportId() {
-        return passportId;
-    }
-
-    public void setPassportId(String passportId) {
-        this.passportId = passportId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Accounts_type getType() {
@@ -148,6 +86,10 @@ public abstract class Account {
 
     public Double getBalance() {
         return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
     }
 
     public Branch getBranch() {

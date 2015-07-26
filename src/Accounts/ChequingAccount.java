@@ -10,12 +10,7 @@ public class ChequingAccount extends Account {
      * @param account is account to set
      */
     public ChequingAccount(Account account) {
-        this.firstName = account.getFirstName();
-        this.lastName = account.getLastName();
-        this.patronym = account.getPatronym();
-        this.dateOfBirth = account.getDateOfBirth();
-        this.sex = getSex();
-        this.passportId = account.getPassportId();
+        this.customer = account.getCustomer();
         this.id = account.getId();
         this.balance = account.getBalance();
         this.type = Accounts_type.Chequing;
