@@ -1,4 +1,7 @@
-package com.company;
+package com.company.account;
+
+import com.company.Transaction;
+import com.company.account.type.ACCOUNT_TYPE;
 
 /**
  * Created by Admin on 25.07.2015.
@@ -8,19 +11,44 @@ public abstract class Account {
      * variables for storing account's data
      */
     private static Integer transactionsCount = 0;
-    private String firstName;
-    private String lastName;
-    private String patronym;
-    private String dateOfBirth;
-    private String sex;
-    private String passportId;
-    private Transaction[] transactions = new Transaction[100];
+    protected String id;
+    protected String firstName;
+    protected String lastName;
+    protected String patronym;
+    protected String dateOfBirth;
+    protected String sex;
+    protected String passportId;
+    protected Transaction[] transactions = new Transaction[100];
+
+    public Account() {
+
+    }
+
+
 
     /**
      * abstract methods for child classes to implement
      */
     public abstract void calculate();
+
     public abstract void description();
+
+    public Object changeTypeTo(ACCOUNT_TYPE type) {
+        Object result = null;
+
+        if(type.equals(ACCOUNT_TYPE.BUSINESS)){
+            BusinessAccount businessAccount = new BusinessAccount(this);
+            result = businessAccount;
+        }else if(type.equals(ACCOUNT_TYPE.CHEQUING)){
+            ChequingAccount chequingAccount = new ChequingAccount(this);
+            result = chequingAccount;
+        }else if(type.equals(ACCOUNT_TYPE.BUSINESS)){
+            SavingAccount savingAccount = new SavingAccount(this);
+            result = savingAccount;
+        }
+
+        return result;
+    }
 
     /**
      * method for adding transaction
@@ -32,9 +60,11 @@ public abstract class Account {
         return null;
     }
 
+
     /*
      * getters and setters for private variables
      */
+
     public String getFirstName() {
         return firstName;
     }
@@ -81,5 +111,9 @@ public abstract class Account {
 
     public void setPassportId(String passportId) {
         this.passportId = passportId;
+    }
+
+    public String getId() {
+        return id;
     }
 }

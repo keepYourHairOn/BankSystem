@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.account.Account;
+import com.company.account.type.ACCOUNT_TYPE;
+
 /**
  * Created by Admin on 25.07.2015.
  */
@@ -18,13 +21,13 @@ public class Branch {
 
     /**
      * method for adding account to the branch
-     * @param name is name of the branch
-     * @param address is postal address
-     * @return added account
      */
-    public Account createAccount(String name, String address){
-        accountsCount++;
-        return null;
+    public void addAccount(Account account){
+        if(accountsCount <= 100){
+            accounts[accountsCount] = account; accountsCount++;
+        }else{
+            System.out.print("This branch contains 100 accounts already");
+        }
     }
 
     /**
@@ -33,6 +36,7 @@ public class Branch {
      * @return deleted account
      */
     public Account deleteAccount(Integer id) {
+
         return null;
     }
 
@@ -40,7 +44,14 @@ public class Branch {
      * getters and setters for private variables
      */
     public Account getAccountById(Integer id){
-        return null;
+        Account result = null;
+        for (Account account : accounts) {
+            if(account.getId().equals(id)) {
+                result = account;
+                break;
+            }
+        }
+        return result;
     }
 
     public int getId() {
