@@ -1,7 +1,6 @@
 package com.company;
 
-import com.company.account.Account;
-import com.company.account.type.ACCOUNT_TYPE;
+import Accounts.Account;
 
 /**
  * Created by Admin on 25.07.2015.
@@ -21,12 +20,14 @@ public class Branch {
 
     /**
      * method for adding account to the branch
+     * @param account to add
      */
     public void addAccount(Account account){
-        if(accountsCount <= 100){
-            accounts[accountsCount] = account; accountsCount++;
-        }else{
-            System.out.print("This branch contains 100 accounts already");
+        if (accountsCount < 100) {
+            accounts[accountsCount] = account;
+            accountsCount++;
+        } else {
+            System.out.println("This branch already has 100 accounts!");
         }
     }
 
@@ -36,7 +37,6 @@ public class Branch {
      * @return deleted account
      */
     public Account deleteAccount(Integer id) {
-
         return null;
     }
 
@@ -44,14 +44,12 @@ public class Branch {
      * getters and setters for private variables
      */
     public Account getAccountById(Integer id){
-        Account result = null;
         for (Account account : accounts) {
-            if(account.getId().equals(id)) {
-                result = account;
-                break;
+            if (account.getId().equals(id)) {
+                return account;
             }
         }
-        return result;
+        return null;
     }
 
     public int getId() {
