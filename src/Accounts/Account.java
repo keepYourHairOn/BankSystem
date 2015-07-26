@@ -2,6 +2,8 @@ package Accounts;
 
 import com.company.Transaction;
 
+import java.util.Random;
+
 /**
  * Created by Admin on 25.07.2015.
  */
@@ -19,7 +21,28 @@ public abstract class Account {
     protected String passportId;
     protected Transaction[] transactions = new Transaction[100];
     private Accounts_type type;
+    protected Double balance;
 
+    /**
+     * constructor with parameters
+     *
+     * @param firstName   is name of the user
+     * @param lastName    is surname of the user
+     * @param patronym    is patronym of the user
+     * @param dateOfBirth is day month and year of birth
+     * @param sex         is sex of user
+     * @param passportId  is passport number
+     */
+    public Account(String firstName, String lastName, String patronym, String dateOfBirth, String sex, String passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.patronym = patronym;
+        this.dateOfBirth = dateOfBirth;
+        this.sex = sex;
+        this.passportId = passportId;
+        Random random = new Random();
+        this.id = random.nextInt(1000);
+    }
 
     /**
      * default constructor
@@ -118,5 +141,9 @@ public abstract class Account {
 
     public Integer getId() {
         return id;
+    }
+
+    public Double getBalance() {
+        return balance;
     }
 }

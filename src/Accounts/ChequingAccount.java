@@ -4,10 +4,11 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class ChequingAccount extends Account {
-    Accounts_type type = Accounts_type.Chequing;
+    private Accounts_type type = Accounts_type.Chequing;
+    private Double interest = 1000d / 30;
 
     /**
-     * constructor with pramaneters
+     * constructor with parameters
      *
      * @param account is account to set
      */
@@ -19,11 +20,12 @@ public class ChequingAccount extends Account {
         this.sex = getSex();
         this.passportId = account.getPassportId();
         this.id = account.getId();
+        this.balance = account.getBalance();
     }
 
     @Override
     public void calculate() {
-
+        this.balance -= interest;
     }
 
     @Override

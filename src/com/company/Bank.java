@@ -12,13 +12,13 @@ public class Bank {
 
     /**
      * method for adding new branch of the bank
-     * @param name is name of the branch
-     * @param address postal address of the branch
-     * @return added branch
+     * @param branch is branch to add
      */
-    public Branch createBranch(String name, String address){
-        branchesCount++;
-        return null;
+    public void addBranch(Branch branch) {
+        if (branchesCount < 5) {
+            branches[branchesCount] = branch;
+            branchesCount++;
+        }
     }
 
     /**
@@ -27,6 +27,15 @@ public class Bank {
      * @return deleted branch
      */
     public Branch deleteBranch(Integer id){
+        if (id <= branchesCount) {
+            Branch branchToDelete = branches[id];
+            branchesCount--;
+            for (int i = id; i < branchesCount; i++) {
+                branches[i] = branches[i + 1];
+            }
+
+            return branchToDelete;
+        }
         return null;
     }
 
@@ -36,6 +45,11 @@ public class Bank {
      * @return finded branch
      */
     public Branch getBranchById(Integer id){
+        for (Branch branch : branches) {
+            if (branch.getId() == id) {
+                return branches[id];
+            }
+        }
         return null;
     }
 }

@@ -5,9 +5,10 @@ package Accounts;
  */
 public class BusinessAccount extends Account {
     Accounts_type type = Accounts_type.Business;
+    private Double interest = 0.01 / 30;
 
     /**
-     * constructor with pramaneters
+     * constructor with parameters
      *
      * @param account is account to set
      */
@@ -19,11 +20,12 @@ public class BusinessAccount extends Account {
         this.sex = getSex();
         this.passportId = account.getPassportId();
         this.id = account.getId();
+        this.balance = account.getBalance();
     }
 
     @Override
     public void calculate() {
-
+        this.balance += balance * interest;
     }
 
     @Override

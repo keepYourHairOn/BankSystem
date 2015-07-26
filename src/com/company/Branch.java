@@ -2,6 +2,8 @@ package com.company;
 
 import Accounts.Account;
 
+import java.util.Random;
+
 /**
  * Created by Admin on 25.07.2015.
  */
@@ -11,12 +13,30 @@ public class Branch {
      */
     private static Integer accountsCount = 0;
     private int id;
+    private String name;
     // manager of the branch
     private Account manager;
     private String address;
     private String phoneNumber;
     private String businessHoursListing;
     private Account[] accounts = new Account[100];
+
+    /**
+     * constructor with parameters
+     *
+     * @param name                 is name of the user
+     * @param address              is address of the user
+     * @param phoneNumber          is number of the user
+     * @param businessHoursListing is list of work hours
+     */
+    public Branch(String name, String address, String phoneNumber, String businessHoursListing) {
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.businessHoursListing = businessHoursListing;
+        Random random = new Random();
+        this.id = random.nextInt(1000);
+    }
 
     /**
      * method for adding account to the branch
@@ -37,6 +57,15 @@ public class Branch {
      * @return deleted account
      */
     public Account deleteAccount(Integer id) {
+        if (id <= accountsCount) {
+            Account accountToDelete = accounts[id];
+            accountsCount--;
+            for (int i = id; i < accountsCount; i++) {
+                accounts[i] = accounts[i + 1];
+            }
+
+            return accountToDelete;
+        }
         return null;
     }
 
@@ -52,6 +81,9 @@ public class Branch {
         return null;
     }
 
+    /**
+     * getters and setters for private variables
+     */
     public int getId() {
         return id;
     }
