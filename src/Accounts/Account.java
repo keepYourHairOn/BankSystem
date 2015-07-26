@@ -1,6 +1,6 @@
 package Accounts;
 
-import com.company.Transaction;
+import Transaction.Transaction;
 
 import java.util.Random;
 
@@ -20,7 +20,7 @@ public abstract class Account {
     protected String sex;
     protected String passportId;
     protected Transaction[] transactions = new Transaction[100];
-    private Accounts_type type;
+    protected Accounts_type type;
     protected Double balance;
 
     /**

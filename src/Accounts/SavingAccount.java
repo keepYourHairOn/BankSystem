@@ -4,7 +4,6 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class SavingAccount extends Account {
-    private Accounts_type type = Accounts_type.Saving;
     private Double interest = 0.05 / 30;
 
     /**
@@ -21,6 +20,13 @@ public class SavingAccount extends Account {
         this.passportId = account.getPassportId();
         this.id = account.getId();
         this.balance = account.getBalance();
+        this.type = Accounts_type.Saving;
+    }
+
+    /**
+     * default constructor
+     */
+    public SavingAccount() {
     }
 
     @Override

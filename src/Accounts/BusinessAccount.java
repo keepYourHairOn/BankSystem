@@ -4,7 +4,6 @@ package Accounts;
  * Created by Admin on 26.07.2015.
  */
 public class BusinessAccount extends Account {
-    Accounts_type type = Accounts_type.Business;
     private Double interest = 0.01 / 30;
 
     /**
@@ -21,6 +20,13 @@ public class BusinessAccount extends Account {
         this.passportId = account.getPassportId();
         this.id = account.getId();
         this.balance = account.getBalance();
+        this.type = Accounts_type.Business;
+    }
+
+    /**
+     * default constructor
+     */
+    public BusinessAccount() {
     }
 
     @Override
