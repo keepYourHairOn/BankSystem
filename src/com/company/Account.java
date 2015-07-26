@@ -4,15 +4,33 @@ package com.company;
  * Created by Admin on 25.07.2015.
  */
 public abstract class Account {
+    /**
+     * variables for storing account's data
+     */
+    private static Integer transactionsCount = 0;
     private String firstName;
     private String lastName;
-    private String patrinym;
+    private String patronym;
     private String dateOfBirth;
     private String sex;
     private String passportId;
     private Transaction[] transactions = new Transaction[100];
 
+    /**
+     * abstract methods for child classes to implement
+     */
     public abstract void calculate();
+    public abstract void description();
+
+    /**
+     * method for adding transaction
+     * @param transaction
+     * @return
+     */
+    public Transaction addTransaction(Transaction transaction){
+        transactionsCount++;
+        return null;
+    }
 
     /*
      * getters and setters for private variables
@@ -33,12 +51,12 @@ public abstract class Account {
         this.lastName = lastName;
     }
 
-    public String getPatrinym() {
-        return patrinym;
+    public String getPatronym() {
+        return patronym;
     }
 
-    public void setPatrinym(String patrinym) {
-        this.patrinym = patrinym;
+    public void setPatronym(String patronym) {
+        this.patronym = patronym;
     }
 
     public String getDateOfBirth() {
