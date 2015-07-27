@@ -1,8 +1,6 @@
 package com.company;
 
-import Accounts.Account;
-import Accounts.Accounts_type;
-import Accounts.BusinessAccount;
+import Accounts.*;
 
 /**
  * Created by Admin on 25.07.2015.
@@ -15,6 +13,7 @@ public class Customer {
     protected String sex;
     protected String passportId;
     private Account account;
+    private Branch branch;
 
     /**
      * constructor with parameters
@@ -39,15 +38,38 @@ public class Customer {
     /**
      * method for creation an account for the user
      */
-    public void openAccount(Accounts_type type) {
-        if (account == null) {
+    public void openAccount(Accounts_type type, Double cash, Branch branch) {
+        if (account == null && branch != null) {
             if (type.equals(Accounts_type.Business)) {
-                account = new BusinessAccount(account);
-                account.setCustomer(this);
-                //account.setBalance();
-                // add logic of making account, when initial deposit is less than needed and so on
-
+                if (cash >= 5000000d) {
+                    account = new BusinessAccount(this, cash);
+                    this.branch = branch;
+                    account.setBranch(branch);
+                    this.branch.addAccount(account);
+                } else {
+                    System.out.println("There is not enough of money to open such an account!");
+                }
+            } else if (type.equals(Accounts_type.Chequing)) {
+                if (cash >= 1000) {
+                    account = new ChequingAccount(this, cash);
+                    this.branch = branch;
+                    account.setBranch(branch);
+                    this.branch.addAccount(account);
+                } else {
+                    System.out.println("There is not enough of money to open such an account!");
+                }
+            } else if (type.equals(Accounts_type.Saving)) {
+                if (cash >= 50000) {
+                    account = new SavingAccount(this, cash);
+                    this.branch = branch;
+                    account.setBranch(branch);
+                    this.branch.addAccount(account);
+                } else {
+                    System.out.println("There is not enough of money to open such an account!");
+                }
             }
+        } else {
+            System.out.println("You already have an account!");
         }
     }
 
@@ -56,8 +78,14 @@ public class Customer {
      *
      * @return deleted account
      */
-    public Account closeAccount() {
-        return null;
+    public Account closeAccount(Integer id) {
+        Account tmp = branch.getAccountById(id);
+        if (tmp != null) {
+            branch.deleteAccount(id);
+        } else {
+            System.out.println("There is no such account!");
+        }
+        return tmp;
     }
 
     /**
@@ -66,6 +94,7 @@ public class Customer {
      * @return true if transaction flows without problems
      */
     public boolean makeTransaction() {
+        
         return true;
     }
 }

@@ -1,5 +1,9 @@
 package Accounts;
 
+import com.company.Customer;
+
+import java.util.Random;
+
 /**
  * Created by Admin on 26.07.2015.
  */
@@ -16,12 +20,21 @@ public class BusinessAccount extends Account {
         this.balance = account.getBalance();
         this.type = Accounts_type.Business;
         this.interest = 0.01 / 30;
+        this.customer = account.getCustomer();
     }
 
     /**
-     * default constructor
+     * constructor with parameters
+     * @param customer is customer to make account for
+     * @param cash is cash to deposit on the account
      */
-    public BusinessAccount() {
+    public BusinessAccount(Customer customer, Double cash) {
+        this.customer = customer;
+        Random random = new Random();
+        this.id = random.nextInt(1000);
+        this.balance = cash;
+        this.type = Accounts_type.Business;
+        this.interest = 0.01 / 30;
     }
 
     @Override
