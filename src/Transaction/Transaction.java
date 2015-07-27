@@ -20,13 +20,7 @@ public abstract class Transaction {
 
     /**
      * constructor with parameters
-     */
-    public Transaction(Account type1, Account type2) {
-        this.firstAccount = type1;
-        this.secondAccount = type2;
-        this.firstAccountBranch = firstAccount.getBranch();
-        this.secondAccountBranch = secondAccount.getBranch();
-    }
+     * */
 
     public Transaction() {
     }

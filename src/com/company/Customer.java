@@ -1,6 +1,8 @@
 package com.company;
 
 import Accounts.*;
+import Transaction.*;
+import Transaction.Transaction_types;
 
 /**
  * Created by Admin on 25.07.2015.
@@ -93,8 +95,36 @@ public class Customer {
      *
      * @return true if transaction flows without problems
      */
-    public boolean makeTransaction() {
-        
-        return true;
+    public boolean makeTransaction(Transaction_types type, Double cash, Account account2) {
+        Transaction transaction = null;
+        if (this.account != null) {
+            if (type.equals(Transaction_types.Withdrawal)) {
+                transaction = new Withdrawal(cash, this.account);
+                this.account.addTransaction(transaction);
+                return true;
+            } else if (type.equals(Transaction_types.Deposit)) {
+                transaction = new Deposit(cash, this.account);
+                this.account.addTransaction(transaction);
+                return true;
+            } else if (type.equals(Transaction_types.Transfer)) {
+                if (account2 == null) {
+                    System.out.println("Transaction operation is impossible!");
+                } else {
+                    transaction = new Transfer(cash, this.account, account2);
+                    this.account.addTransaction(transaction);
+                    return true;
+                }
+            } else if (type.equals(Transaction_types.Inter_branch_transfer)) {
+                if (account2 == null) {
+                    System.out.println("Transaction operation is impossible!");
+                } else {
+                    transaction = new InterBranchTransfer(cash, this.account, account2);
+                    this.account.addTransaction(transaction);
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

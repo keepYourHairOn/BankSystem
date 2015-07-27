@@ -1,5 +1,7 @@
 package Transaction;
 
+import Accounts.Account;
+
 import java.util.Date;
 
 /**
@@ -16,7 +18,8 @@ public class Deposit extends Transaction {
      *
      * @param deposit is deposit to add to the balance
      */
-    public Deposit(double deposit) {
+    public Deposit(double deposit, Account type1) {
+        this.firstAccount = type1;
         this.deposit = deposit;
         this.balance = firstAccount.getBalance();
         this.secondAccount = null;

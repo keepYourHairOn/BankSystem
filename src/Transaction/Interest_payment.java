@@ -1,5 +1,8 @@
 package Transaction;
 
+import Accounts.Account;
+import com.sun.prism.impl.paint.PaintUtil;
+
 import java.util.Date;
 
 /**
@@ -9,7 +12,9 @@ public class Interest_payment extends Transaction {
     private String transaction;
     private Transaction_types type = Transaction_types.Transfer;
 
-
+    public Interest_payment(Account type1) {
+        this.firstAccount = type1;
+    }
     @Override
     public void description() {
         System.out.println("Interest calculation for the account according to its type.");

@@ -1,5 +1,7 @@
 package Transaction;
 
+import Accounts.Account;
+
 import java.util.Date;
 
 /**
@@ -17,8 +19,10 @@ public class Transfer extends Transaction {
      *
      * @param transfer is transfer to add to the balance2 from the balance1
      */
-    public Transfer(double transfer) {
+    public Transfer(double transfer, Account type1, Account type2) {
         this.transfer = transfer;
+        this.firstAccount = type1;
+        this.secondAccount = type2;
         this.balance1 = firstAccount.getBalance();
         this.balance2 = secondAccount.getBalance();
         this.firstAccountBranch = firstAccount.getBranch();

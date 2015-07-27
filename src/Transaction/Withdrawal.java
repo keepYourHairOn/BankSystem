@@ -1,5 +1,7 @@
 package Transaction;
 
+import Accounts.Account;
+
 import java.util.Date;
 
 /**
@@ -16,7 +18,8 @@ public class Withdrawal extends Transaction {
      *
      * @param withdraw is money to withdraw from the balance
      */
-    public Withdrawal(double withdraw) {
+    public Withdrawal(double withdraw, Account type1) {
+        this.firstAccount = type1;
         this.withdraw = withdraw;
         this.balance = firstAccount.getBalance();
         this.secondAccount = null;

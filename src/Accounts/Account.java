@@ -64,6 +64,19 @@ public abstract class Account {
         }
     }
 
+    /**
+     * @param id
+     * @return
+     */
+    public Transaction getTransactionById(int id) {
+        if (id > 0 && id < transactionsCount) {
+            Transaction tmp = transactions[id];
+            return tmp;
+        } else {
+            return null;
+        }
+    }
+
     /*
      * getters and setters for private variables
      */
